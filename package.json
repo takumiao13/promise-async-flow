@@ -1,0 +1,19 @@
+{
+  "name": "promise-async-flow",
+  "version": "0.1.3",
+  "description": "lightly async flow control based on Promise",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "takumiao13",
+  "keywords": [
+    "promise",
+    "async",
+    "flow-control"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0"
+  }
+}
