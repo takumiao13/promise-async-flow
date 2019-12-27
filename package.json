@@ -12,6 +12,13 @@
     "async",
     "flow-control"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takumiao13/promise-async-flow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/takumiao13/promise-async-flow/issues"
+  },
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.2.0"
