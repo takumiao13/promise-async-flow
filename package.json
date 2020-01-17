@@ -1,6 +1,6 @@
 {
   "name": "promise-async-flow",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "lightly async flow control based on Promise",
   "main": "index.js",
   "scripts": {
