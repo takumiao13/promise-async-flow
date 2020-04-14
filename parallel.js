@@ -1,1 +1,3 @@
-module.exports = require('./src/createAll')();
+const parallel = require('./src/createAll')();
+module.exports = parallel;
+module.exports.default = parallel;

@@ -1,1 +1,3 @@
-module.exports = require('./src/createSeries')();
+const waterfall = require('./src/createSeries')();
+module.exports = waterfall;
+module.exports.default = waterfall;

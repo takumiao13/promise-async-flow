@@ -11,14 +11,17 @@ then
 
 ```js
 // cjs
-const flow = require('promise-async-flow');
+const asyncFlow = require('promise-async-flow');
 const { parallel } = require('promise-async-flow');
 const parallel = require('promise-async-flow/parallel');
 
 // esm
-import flow from 'promise-async-flow'
+import asyncFlow from 'promise-async-flow'
 import { parallel } from 'promise-async-flow'
 import parallel from 'promise-async-flow/parallel'
+
+// browser
+<script type="dist/async-flow.js"></script>
 ```
 
 ## API
@@ -39,7 +42,7 @@ parallel(
 Run each task in parallel and resolve with an array of results.
 
 ```js
-flow.parallel([
+asyncFlow.parallel([
   () => 1,
   () => Promise.resolve(2),
   async () => (1 + await Promise.resolve(3))
@@ -58,7 +61,7 @@ settled(
 Run each task in parallel and resolve with an array of objects that each describe the outcome of each promise.
 
 ```js
-flow.settled([
+asyncFlow.settled([
   () => 1,
   () => Promise.reject(2),
   async () => { throw 3 }
@@ -81,7 +84,7 @@ series(
 Run each task in series and resolve with an array of results.
 
 ```js
-flow.series([
+asyncFlow.series([
   () => 1,
   () => Promise.resolve(2),
   async () => (1 + await Promise.resolve(3))
@@ -100,7 +103,7 @@ waterfall(
 Run each task in series, could pass the return to the next task and resolve with the last of result.
 
 ```js
-flow.waterfall([
+asyncFlow.waterfall([
   (arg) => {
     console.log(arg); //=> 1
     return arg + 1;
